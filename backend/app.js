@@ -18,9 +18,14 @@ db.once("open", () => console.log("Connected to local MongoDB"));
 app.use(express.json());
 
 // Routes
-app.get("/api/v1/games", (req, res) => {
-  const games = Game.find({});
-  res.send(games);
+app.get("/api/v1/games", async (req, res) => {
+  const games = await Game.find();
+  res.status(200).json({
+    status: "success",
+    data: {
+      games,
+    },
+  });
 });
 
 app.post("/api/v1/games", async (req, res) => {
