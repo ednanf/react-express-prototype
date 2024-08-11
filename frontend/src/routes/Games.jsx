@@ -22,6 +22,8 @@ function Games() {
 
   // TODO: learn how to make the form send to the server
   // maybe use axios, the code should not be in the html I think
+  // TODO: install axios
+  // TODO: research how to get values from the input fields to send via axios
 
   return (
     <div>
