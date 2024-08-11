@@ -1,11 +1,30 @@
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 function Games() {
+  const [games, setGames] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/v1/games')
+      .then((res) => res.json())
+      .then((result) => setGames(result.data.games));
+  }, []);
+
+  function renderItems() {
+    return games.map((game, index) => {
+      return (
+        <div key={index}>
+          <p>Title: {game.title}</p>
+          <p>Platform: {game.platform}</p>
+        </div>
+      );
+    });
+  }
+
   return (
-    <>
-      <Link to='/games/1'>Game 1</Link>
-      <Link to='/games/2'>Game 2</Link>
-    </>
+    <div>
+      <h2>Games</h2>
+      {renderItems()}
+    </div>
   );
 }
 

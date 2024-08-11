@@ -10,7 +10,7 @@ function App() {
       <nav>
         <Navbar />
       </nav>
-      <main>
+      <main className='main-body'>
         <Outlet />
       </main>
     </>

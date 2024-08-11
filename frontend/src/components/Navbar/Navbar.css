@@ -1,5 +1,5 @@
 .navbar_bg {
-    background-color: #2b2d42;
+    background-color: var(--dark-blue);
     height: 70px;
     display: flex;
     align-items: center;
@@ -7,7 +7,7 @@
 }
 
 .brand {
-    color: #EDF2F4;
+    color: var(--off-white);
     margin-left: 20px;
 }
 
@@ -18,11 +18,11 @@
 }
 
 .navbar-link {
-    color: #EDF2F4;
+    color: var(--off-white);
     text-decoration: none;
     transition: 0.2s;
 }
 
 .navbar-link:hover {
-    color: #EF233C;
+    color: var(--light-red);
 }
