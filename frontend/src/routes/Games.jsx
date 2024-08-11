@@ -21,11 +21,12 @@ function Games() {
   }
 
   // TODO: learn how to make the form send to the server
+  // maybe use axios, the code should not be in the html I think
 
   return (
     <div>
       <h2>Add Game</h2>
-      <form action='localhost:3000/api/v1/games' method='POST'>
+      <form action='http://localhost:3000/api/v1/games' method='POST'>
         <div>
           <label htmlFor='title'>Title</label>
           <input type='text' id='title' name='title' placeholder='Enter a title...' />
