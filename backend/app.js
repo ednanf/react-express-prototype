@@ -1,9 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
-
-const app = express();
+const dotenv = require("dotenv");
 
 const Game = require("./models/game");
+
+const app = express();
+dotenv.config();
 
 const PORT = process.env.PORT || 8000;
 
