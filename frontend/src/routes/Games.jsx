@@ -20,8 +20,22 @@ function Games() {
     });
   }
 
+  // TODO: learn how to make the form send to the server
+
   return (
     <div>
+      <h2>Add Game</h2>
+      <form action='localhost:3000/api/v1/games' method='POST'>
+        <div>
+          <label htmlFor='title'>Title</label>
+          <input type='text' id='title' name='title' placeholder='Enter a title...' />
+        </div>
+        <div>
+          <label htmlFor='platform'>Platform</label>
+          <input type='text' id='platform' name='platform' placeholder='Enter a platform...' />
+        </div>
+        <button>Submit</button>
+      </form>
       <h2>Games</h2>
       {renderItems()}
     </div>
