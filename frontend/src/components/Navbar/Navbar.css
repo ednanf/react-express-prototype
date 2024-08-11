@@ -1,0 +1,28 @@
+.navbar_bg {
+    background-color: #2b2d42;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    color: #EDF2F4;
+    margin-left: 20px;
+}
+
+.right-side {
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.navbar-link {
+    color: #EDF2F4;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.navbar-link:hover {
+    color: #EF233C;
+}

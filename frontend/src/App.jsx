@@ -1,9 +1,15 @@
-import "./App.css";
+import Navbar from './components/Navbar/Navbar';
+import './App.css';
 
 function App() {
   return (
     <>
-      <h1>Hello, World!</h1>
+      <nav>
+        <Navbar></Navbar>
+      </nav>
+      <main>
+        <p>Hello, World!</p>
+      </main>
     </>
   );
 }
