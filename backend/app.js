@@ -33,8 +33,8 @@ app.get('/api/v1/games', async (req, res) => {
 });
 
 app.post('/api/v1/games', async (req, res) => {
-  const { title, platform } = req.body;
-  const game = new Game({ title, platform });
+  const { title, platform, media, cover } = req.body;
+  const game = new Game({ title, platform, media, cover });
   await game.save();
   res.status(201).send('Game created successfully!');
 });

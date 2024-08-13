@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// Don't forget to update the POST request route with new fields
 const GameSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -9,7 +10,7 @@ const GameSchema = new mongoose.Schema({
     type: String,
   },
   media: {
-    enum: ['physical', 'digital'],
+    type: String,
   },
   cover: {
     type: String,
