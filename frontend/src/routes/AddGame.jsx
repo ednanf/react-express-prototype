@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const AddGame = () => {
   const [formData, setFormData] = useState({
     title: '',
     platform: '',
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const value = e.target.value;
@@ -29,6 +32,8 @@ const AddGame = () => {
     axios
       .post('http://localhost:3000/api/v1/games', gameData, { headers })
       .then((response) => console.log(response.status, response.data.token));
+
+    navigate('/games');
   };
 
   return (

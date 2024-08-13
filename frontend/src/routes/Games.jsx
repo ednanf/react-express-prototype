@@ -5,6 +5,7 @@ function Games() {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
+    // TODO: change to axios
     fetch('http://localhost:3000/api/v1/games')
       .then((res) => res.json())
       .then((result) => setGames(result.data.games));
