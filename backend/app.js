@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const morgan = require('morgan');
 
 const Game = require('./models/game');
 
@@ -20,6 +21,7 @@ db.once('open', () => console.log('Connected to Atlas MongoDB'));
 
 // Middleware
 app.use(express.json());
+app.use(morgan('dev'));
 
 // Routes
 app.get('/api/v1/games', async (req, res) => {
