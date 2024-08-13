@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+import GameForm from '../components/GameForm/GameForm';
+
 const AddGame = () => {
   const [mediaType, setMediaType] = useState();
   const [formData, setFormData] = useState({
@@ -43,34 +45,7 @@ const AddGame = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor='title'>Title: </label>
-        <input type='text' name='title' id='title' placeholder='Title' value={formData.title} onChange={handleChange} />
-        <label htmlFor='cover'>Cover URL:</label>
-        <input
-          type='text'
-          name='cover'
-          id='cover'
-          placeholder='Cover URL'
-          value={formData.cover}
-          onChange={handleChange}
-        />
-        <label htmlFor='platform'>Platform:</label>
-        <input
-          type='text'
-          name='platform'
-          id='platform'
-          placeholder='Platform'
-          value={formData.platform}
-          onChange={handleChange}
-        />
-        <label htmlFor='media'>Format:</label>
-        <input type='radio' name='media' value='physical' onChange={handleChange} />
-        Physical
-        <input type='radio' name='media' value='digital' onChange={handleChange} />
-        Digital
-        <button type='submit'>Submit</button>
-      </form>
+      <GameForm formData={formData} handleChange={handleChange} handleSubmit={handleSubmit} />
     </div>
   );
 };
