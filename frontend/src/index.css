@@ -1,18 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto';
-}
-
-:root {
-    --dark-blue: #2B2D42;
-    --gray: #8D99AE;
-    --off-white: #EDF2F4;
-    --light-red: #EF233C;
-    --dark-red: #D90429;
-}
-
-body {
-    background-color: var(--off-white)
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
