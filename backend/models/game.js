@@ -8,6 +8,12 @@ const GameSchema = new mongoose.Schema({
   platform: {
     type: String,
   },
+  media: {
+    enum: ['physical', 'digital'],
+  },
+  cover: {
+    type: String,
+  },
 });
 
 module.exports = mongoose.model('Game', GameSchema);
