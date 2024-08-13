@@ -11,6 +11,7 @@ import Register from './routes/Register.jsx';
 import Login from './routes/Login.jsx';
 import GameDetails from './routes/GameDetails.jsx';
 import ErrorPage from './routes/ErrorPage.jsx';
+import AddGame from './routes/AddGame.jsx';
 
 // Router
 const router = createBrowserRouter([
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: '/games/:id',
         element: <GameDetails />,
+      },
+      {
+        path: '/add-games',
+        element: <AddGame />,
       },
       {
         path: '/register',
