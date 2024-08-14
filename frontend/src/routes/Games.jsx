@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import Button from '../components/Button';
+import ListRow from '../components/ListRow';
 
 function Games() {
   const [games, setGames] = useState([]);
@@ -15,8 +16,7 @@ function Games() {
     return games.map((game, index) => {
       return (
         <div key={index}>
-          <p>Title: {game.title}</p>
-          <p>Platform: {game.platform}</p>
+          <ListRow game={game} />
         </div>
       );
     });
@@ -25,7 +25,7 @@ function Games() {
   return (
     <div>
       <div className=''>
-        <div className='flex items-center justify-between px-3 pt-2'>
+        <div className='mx-3 mt-2 flex items-center justify-between'>
           <h2 className='text-3xl'>Games</h2>
           <Button url='/add-games'>Add game</Button>
         </div>
