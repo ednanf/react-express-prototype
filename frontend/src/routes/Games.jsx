@@ -23,10 +23,29 @@ function Games() {
     });
   }
 
+  //TODO: FIX HORIZONTAL SCROLLING!
+
   return (
     <div>
       <Header title='Games' />
-      <ButtonLink url='/add-games'>Add game</ButtonLink>
+      <div className='flex items-center justify-around'>
+        <div className='flex'>
+          <ButtonLink url='/add-games' width='100'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              strokeWidth={1.5}
+              stroke='currentColor'
+              className='size-6'
+            >
+              <path strokeLinecap='round' strokeLinejoin='round' d='M12 4.5v15m7.5-7.5h-15' />
+            </svg>
+            Add Game
+          </ButtonLink>
+        </div>
+        <input type='text' placeholder='search...' />
+      </div>
       <div className='mt-4'>{renderItems()}</div>
     </div>
   );
