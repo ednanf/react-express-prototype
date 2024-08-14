@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-import Button from '../components/Button';
 import ListRow from '../components/ListRow';
+import Header from '../components/Header';
+import Button from '../components/Button';
 
 function Games() {
   const [games, setGames] = useState([]);
@@ -24,13 +25,8 @@ function Games() {
 
   return (
     <div>
-      <div className=''>
-        <div className='mx-3 mt-2 flex items-center justify-between'>
-          <h2 className='text-3xl'>Games</h2>
-          <Button url='/add-games'>Add game</Button>
-        </div>
-        <hr className='my-2'></hr>
-      </div>
+      <Header title='Games' />
+      <Button url='/add-games'>Add game</Button>
       {renderItems()}
     </div>
   );
