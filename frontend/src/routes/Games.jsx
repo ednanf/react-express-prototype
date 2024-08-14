@@ -17,7 +17,7 @@ function Games() {
     return games.map((game, index) => {
       return (
         <div key={index}>
-          <ListRow game={game} />
+          <ListRow game={game} index={index} />
         </div>
       );
     });
@@ -27,7 +27,7 @@ function Games() {
     <div>
       <Header title='Games' />
       <Button url='/add-games'>Add game</Button>
-      {renderItems()}
+      <div className='mt-4'>{renderItems()}</div>
     </div>
   );
 }
