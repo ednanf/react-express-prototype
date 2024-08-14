@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
@@ -22,6 +23,14 @@ db.once('open', () => console.log('Connected to Atlas MongoDB'));
 // Middleware
 app.use(express.json());
 app.use(morgan('dev'));
+
+// CORS configuration
+/*
+  For safety reasons, use the options to limit to the front-end url
+*/
+const REACT_SERVER_URL = 'http://localhost:5173';
+const corsOptions = { origin: REACT_SERVER_URL, optionsSuccessStatus: 200 };
+app.use(cors(corsOptions));
 
 // Routes
 app.get('/api/v1/games', async (req, res) => {
