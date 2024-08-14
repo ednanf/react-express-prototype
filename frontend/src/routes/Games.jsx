@@ -4,7 +4,7 @@ import axios from 'axios';
 
 import ListRow from '../components/ListRow';
 import Header from '../components/Header';
-import Button from '../components/Button';
+import ButtonLink from '../components/ButtonLink';
 
 function Games() {
   const [games, setGames] = useState([]);
@@ -26,7 +26,7 @@ function Games() {
   return (
     <div>
       <Header title='Games' />
-      <Button url='/add-games'>Add game</Button>
+      <ButtonLink url='/add-games'>Add game</ButtonLink>
       <div className='mt-4'>{renderItems()}</div>
     </div>
   );
