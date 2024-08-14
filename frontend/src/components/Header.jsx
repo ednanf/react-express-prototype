@@ -18,7 +18,7 @@ function Header() {
         </div>
         <div className='md:hidden'>
           <button
-            className='mt-2 text-mine-shaft-500 transition-colors duration-300 ease-in-out hover:text-mine-shaft-200 focus:outline-none'
+            className='mt-2 text-mine-shaft-500 transition-colors duration-300 ease-in-out hover:text-mine-shaft-200 focus:outline-none sm:hidden'
             onClick={handleClick}
           >
             <svg
