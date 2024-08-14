@@ -6,14 +6,14 @@ import './App.css';
 
 function App() {
   return (
-    <>
-      <nav>
+    <div className='min-h-screen w-screen bg-mine-shaft-50'>
+      <nav className='sticky top-0'>
         <Header />
       </nav>
-      <main className='main-body'>
+      <main>
         <Outlet />
       </main>
-    </>
+    </div>
   );
 }
 
