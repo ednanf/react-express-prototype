@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+import Button from '../components/Button';
 
 function Games() {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
-    // TODO: change to axios
-    fetch('http://localhost:3000/api/v1/games')
-      .then((res) => res.json())
-      .then((result) => setGames(result.data.games));
+    axios.get('http://localhost:3000/api/v1/games').then((r) => setGames(r.data.data.games));
   }, []);
 
   function renderItems() {
@@ -24,8 +24,13 @@ function Games() {
 
   return (
     <div>
-      <h2>Games</h2>
-      <Link to={'/add-games'}>Add game...</Link>
+      <div className=''>
+        <div className='flex items-center justify-between px-3 pt-2'>
+          <h2 className='text-3xl'>Games</h2>
+          <Button url='/add-games'>Add game</Button>
+        </div>
+        <hr className='my-2'></hr>
+      </div>
       {renderItems()}
     </div>
   );

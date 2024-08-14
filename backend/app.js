@@ -51,4 +51,5 @@ app.post('/api/v1/games', async (req, res) => {
 });
 
 // Server init
+// TODO: change to HTTPS
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
