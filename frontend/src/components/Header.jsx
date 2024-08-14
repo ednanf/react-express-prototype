@@ -11,12 +11,12 @@ function Header() {
   }
 
   return (
-    <header className='bg-mine-shaft-950'>
-      <div className='flex items-center justify-between px-4 py-3'>
+    <header className='bg-mine-shaft-950 sm:flex sm:items-center sm:justify-between sm:px-4 sm:py-3'>
+      <div className='flex items-center justify-between px-4 py-3 sm:p-0'>
         <div>
           <img src={Logo} alt='Logo' className='h-16' />
         </div>
-        <div>
+        <div className='md:hidden'>
           <button
             className='mt-2 text-mine-shaft-500 transition-colors duration-300 ease-in-out hover:text-mine-shaft-200 focus:outline-none'
             onClick={handleClick}
@@ -38,7 +38,7 @@ function Header() {
           </button>
         </div>
       </div>
-      <div className={`${isOpen ? 'block' : 'hidden'} px-2 pb-4 pt-2`}>
+      <div className={`${isOpen ? 'block' : 'hidden'} sm: px-2 pb-5 pt-1 sm:flex sm:p-0 sm:pt-1`}>
         <NavLink
           to='/'
           className='block rounded px-2 py-1 font-semibold text-mine-shaft-500 transition-colors duration-75 ease-in-out hover:bg-mine-shaft-400 hover:text-mine-shaft-950'
@@ -46,20 +46,20 @@ function Header() {
           Home
         </NavLink>
         <NavLink
-          to='/'
-          className='mt-1 block rounded px-2 py-1 font-semibold text-mine-shaft-500 transition-colors duration-75 ease-in-out hover:bg-mine-shaft-400 hover:text-mine-shaft-950'
+          to='/games'
+          className='mt-1 block rounded px-2 py-1 font-semibold text-mine-shaft-500 transition-colors duration-75 ease-in-out hover:bg-mine-shaft-400 hover:text-mine-shaft-950 sm:ml-2 sm:mt-0'
         >
           Games
         </NavLink>
         <NavLink
-          to='/'
-          className='mt-1 block rounded px-2 py-1 font-semibold text-mine-shaft-500 transition-colors duration-75 ease-in-out hover:bg-mine-shaft-400 hover:text-mine-shaft-950'
+          to='/register'
+          className='mt-1 block rounded px-2 py-1 font-semibold text-mine-shaft-500 transition-colors duration-75 ease-in-out hover:bg-mine-shaft-400 hover:text-mine-shaft-950 sm:ml-2 sm:mt-0'
         >
           Register
         </NavLink>
         <NavLink
-          to='/'
-          className='mt-1 block rounded px-2 py-1 font-semibold text-mine-shaft-500 transition-colors duration-75 ease-in-out hover:bg-mine-shaft-400 hover:text-mine-shaft-950'
+          to='/login'
+          className='mt-1 block rounded px-2 py-1 font-semibold text-mine-shaft-500 transition-colors duration-75 ease-in-out hover:bg-mine-shaft-400 hover:text-mine-shaft-950 sm:ml-2 sm:mt-0'
         >
           Login
         </NavLink>
